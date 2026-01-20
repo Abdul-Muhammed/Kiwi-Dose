@@ -127,7 +127,7 @@ body {
 .menu-toggle span {
     width: 25px;
     height: 3px;
-    background-color: var(--white);
+    background-color: var(--primary-green);
     transition: var(--transition);
 }
 
@@ -582,13 +582,26 @@ section {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .nav-container {
+        justify-content: center;
+        position: relative;
+    }
+
     .menu-toggle {
         display: flex;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .logo {
+        margin: 0 auto;
     }
 
     .nav-menu {
         position: fixed;
-        top: 70px;
+        top: 102px;
         left: -100%;
         flex-direction: column;
         background-color: #082e06;
@@ -607,6 +620,14 @@ section {
     .nav-menu li {
         width: 100%;
         padding: 1rem 0;
+    }
+
+    .nav-menu a {
+        color: var(--white);
+    }
+
+    .nav-menu a:hover {
+        color: #90EE90;
     }
 
     .hero-title {
