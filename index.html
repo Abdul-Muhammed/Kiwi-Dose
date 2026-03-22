@@ -1,203 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kiwi Dose - Your Daily Dose. A vibrant juice and coffee bar coming soon to Auckland, New Zealand.">
-    <title>Kiwi Dose | Open Now</title>
-    <link rel="stylesheet" href="css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KIWI DOSE — A Fresh Dose of Aotearoa</title>
+  <meta name="description" content="Handcrafted juices, acai bowls & wholesome desserts made with love in New Zealand." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <a href="index.html" class="logo"><img src="kiwi-dose-green.png" alt="Kiwi Dose"></a>
-                <button class="menu-toggle" aria-label="Toggle menu" id="menuToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <ul class="nav-menu" id="navMenu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="story.html">Our Story</a></li>
-                    <li><a href="values.html">Values</a></li>
-                    <li><a href="menu.html">Menu</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="online-ordering.html">Online Ordering</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
 
-    <!-- Hero Section - Coming Soon -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-            <div class="coming-soon-badge">OPEN NOW</div>
-            <h1 class="hero-title"><img src="kiwi-dose-logo_bg.png" alt="Kiwi Dose"></h1>
-            <p class="hero-subtitle">A fresh dose of Aotearoa</p>
-            <!-- <p class="hero-date">Launching early 2026</p> -->
-            <p class="hero-description">At Kiwi Dose, we blend the best the of both worlds - healthy freshness and sweet satisfaction</p>
-            <a href="#signup" class="cta-button">Get Notified</a>
+  <!-- Navigation -->
+  <header class="nav" role="banner">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="KIWI DOSE Home">
+        <img src="kiwi-dose-logo_bg.png" alt="KIWI DOSE" class="logo-light" />
+        <img src="kiwi-dose-green.png" alt="KIWI DOSE" class="logo-dark" />
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="menu.html" class="nav-link">Menu</a>
+        <a href="order.html" class="nav-link">Order Online</a>
+        <a href="story.html" class="nav-link">Our Story</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" role="dialog" aria-label="Mobile navigation">
+    <div class="mobile-menu-blob"></div>
+    <div class="mobile-menu-blob"></div>
+    <a href="index.html" class="mobile-menu-link">Home</a>
+    <a href="menu.html" class="mobile-menu-link">Menu</a>
+    <a href="order.html" class="mobile-menu-link">Order Online</a>
+    <a href="story.html" class="mobile-menu-link">Our Story</a>
+    <a href="contact.html" class="mobile-menu-link">Contact</a>
+  </div>
+
+  <div class="page-wrapper">
+
+    <!-- Hero -->
+    <section class="hero hero-home">
+      <div class="hero-blob hero-blob-1"></div>
+      <div class="hero-blob hero-blob-2"></div>
+      <div class="hero-blob hero-blob-3"></div>
+      <div class="hero-leaves"></div>
+
+      <div class="container hero-content">
+        <span class="eyebrow" style="color: rgba(255,255,255,0.6);">Welcome to KIWI DOSE</span>
+        <h1>A Fresh Dose<br />of <em>Aotearoa</em></h1>
+        <p>Handcrafted juices, vibrant acai bowls &amp; wholesome desserts — made with love and the freshest ingredients from New Zealand.</p>
+        <div class="hero-btns">
+          <a href="menu.html" class="btn btn-secondary btn-lg">
+            Explore Menu
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="story.html" class="btn btn-outline-white btn-lg">Our Story</a>
         </div>
-        <div class="hero-pattern"></div>
+      </div>
+
+      <div class="scroll-indicator">
+        <span>Scroll</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+      </div>
     </section>
 
-    <!-- Welcome Section -->
-    <section class="brand-story">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Welcome to Kiwi Dose</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="content-with-image">
-                <div class="text-side">
-                    <h2 style="margin-top: 0;">Freshness Meets Flavor</h2>
-                    <p>
-                        Kiwi Dose is your destination for fresh, vibrant juices and premium coffee that capture the essence of New Zealand. We're more than just a juice bar – we're a community hub where freshness meets flavor, and every visit feels like a breath of fresh Kiwi air.
-                    </p>
-                    <p>
-                        Located in the heart of Auckland, Kiwi Dose brings together the best of New Zealand's natural bounty. From our signature cold-pressed juices to our expertly crafted coffee blends, every product is designed to energize your day and nourish your body.
-                    </p>
-                </div>
-                <div class="image-side">
-                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?w=800&q=80" alt="Fresh juice and smoothie" class="drink-image">
-                </div>
-            </div>
-            <div class="content-with-image reverse">
-                <div class="text-side">
-                    <h2>Your Daily Wellness</h2>
-                    <p>
-                        Whether you're starting your morning with a power-packed smoothie, grabbing a midday pick-me-up, or winding down with a refreshing juice blend, Kiwi Dose is here to be your daily dose of wellness and vitality.
-                    </p>
-                    <p>
-                        Our menu features an array of cold-pressed juices, nutrient-rich smoothies, and premium coffee selections. Each drink is carefully crafted using locally sourced ingredients whenever possible, ensuring you get the freshest taste of New Zealand in every sip.
-                    </p>
-                </div>
-                <div class="image-side">
-                    <img src="https://images.unsplash.com/photo-1546171753-97d7676e4602?w=800&q=80" alt="Coffee and beverages" class="drink-image">
-                </div>
-            </div>
+    <!-- Intro -->
+    <section class="section-intro">
+      <div class="container-narrow">
+        <div class="reveal">
+          <span class="eyebrow">Our Philosophy</span>
+          <h2>Nature's Goodness,<br />Thoughtfully Crafted</h2>
+          <div class="divider divider-center"></div>
+          <p class="text-lg" style="margin-top: var(--space-md);">
+            At KIWI DOSE, we believe in the power of real ingredients. Every juice is cold-pressed, every bowl is built fresh, and every dessert is made with intention — bringing you the vibrant flavours of Aotearoa in every bite and sip.
+          </p>
         </div>
+      </div>
     </section>
 
-    <!-- Featured Drinks Section -->
-    <section class="brand-values">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Featured Drinks</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="drink-grid">
-                <div class="drink-card">
-                    <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=600&q=80" alt="Green smoothie" class="drink-image">
-                    <div class="drink-card-content">
-                        <h3>Green Power Smoothie</h3>
-                        <p>Packed with spinach, kale, and tropical fruits for an energizing start to your day.</p>
-                    </div>
-                </div>
-                <div class="drink-card">
-                    <img src="https://images.unsplash.com/photo-1571934811356-5cc061b6821f?w=600&q=80" alt="Fresh juice" class="drink-image">
-                    <div class="drink-card-content">
-                        <h3>Cold-Pressed Juices</h3>
-                        <p>Fresh, nutrient-rich juices made from locally sourced fruits and vegetables.</p>
-                    </div>
-                </div>
-                <div class="drink-card">
-                    <img src="https://images.unsplash.com/photo-1517487881594-2787fef5ebf7?w=600&q=80" alt="Coffee" class="drink-image">
-                    <div class="drink-card-content">
-                        <h3>Premium Coffee</h3>
-                        <p>Expertly crafted coffee blends sourced from New Zealand's finest roasters.</p>
-                    </div>
-                </div>
-            </div>
+    <!-- Marquee -->
+    <div class="marquee reveal">
+      <div class="marquee-track">
+        <span class="marquee-item">Fresh Juices <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Acai Bowls <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Wholesome Desserts <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Cold-Pressed <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Natural Ingredients <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Made with Love <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Fresh Juices <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Acai Bowls <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Wholesome Desserts <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Cold-Pressed <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Natural Ingredients <span class="marquee-dot"></span></span>
+        <span class="marquee-item">Made with Love <span class="marquee-dot"></span></span>
+      </div>
+    </div>
+
+    <!-- Categories -->
+    <section>
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">What We Offer</span>
+          <h2>Fresh From Our Kitchen</h2>
+          <p>Every item is crafted daily with whole ingredients and genuine care.</p>
         </div>
+
+        <div class="grid-3">
+          <div class="category-card reveal reveal-delay-1">
+            <div class="category-card-img">
+              <img src="https://images.unsplash.com/photo-1622597467836-f3285f2131b8?auto=format&fit=crop&w=600&q=80" alt="Fresh cold-pressed juices" loading="lazy" />
+            </div>
+            <div class="category-card-body">
+              <h3>Fresh Juices</h3>
+              <p>Cold-pressed daily from locally sourced fruits and vegetables, bursting with natural vitamins and vibrant flavour.</p>
+            </div>
+          </div>
+
+          <div class="category-card reveal reveal-delay-2">
+            <div class="category-card-img">
+              <img src="https://images.unsplash.com/photo-1590301157890-4810ed352733?auto=format&fit=crop&w=600&q=80" alt="Vibrant acai bowls" loading="lazy" />
+            </div>
+            <div class="category-card-body">
+              <h3>Acai Bowls</h3>
+              <p>Thick, creamy acai blended with wholesome toppings — granola, fresh fruit, coconut, and a drizzle of local honey.</p>
+            </div>
+          </div>
+
+          <div class="category-card reveal reveal-delay-3">
+            <div class="category-card-img">
+              <img src="https://images.unsplash.com/photo-1488477181946-6428a0291777?auto=format&fit=crop&w=600&q=80" alt="Wholesome desserts" loading="lazy" />
+            </div>
+            <div class="category-card-body">
+              <h3>Desserts</h3>
+              <p>Indulgent yet wholesome — our desserts use natural sweeteners and real ingredients for guilt-free moments of joy.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Quick Links Section -->
-    <section class="brand-story">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Explore Kiwi Dose</h2>
-                <div class="section-divider"></div>
-            </div>
-            <div class="values-grid">
-                <div class="value-card">
-                    <div class="value-icon">✦✦</div>
-                    <h3 class="value-title">Our Story</h3>
-                    <p class="value-description">Discover the journey behind Kiwi Dose and learn about our passion for fresh, natural goodness inspired by the vibrant spirit of Aotearoa.</p>
-                    <a href="story.html" class="cta-button" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Learn More</a>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">✦✦</div>
-                    <h3 class="value-title">Our Values</h3>
-                    <p class="value-description">Explore the core principles that guide everything we do – from freshness and energy to community connection and innovation.</p>
-                    <a href="values.html" class="cta-button" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Explore Values</a>
-                </div>
-                <div class="value-card">
-                    <div class="value-icon">✦✦</div>
-                    <h3 class="value-title">Get in Touch</h3>
-                    <p class="value-description">Have questions? Want to learn more? Reach out to us and let's start a conversation about your daily dose of freshness.</p>
-                    <a href="contact.html" class="cta-button" style="margin-top: 1rem; padding: 0.75rem 1.5rem; font-size: 0.9rem;">Contact Us</a>
-                </div>
-            </div>
+    <!-- Values -->
+    <section class="section-sage section-wave">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="eyebrow">Why KIWI DOSE</span>
+          <h2>What Sets Us Apart</h2>
         </div>
+
+        <div class="grid-3">
+          <div class="value-card reveal reveal-delay-1">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a10 10 0 0 0-6.88 17.23l.9-.73A8 8 0 1 1 20 12h-2a10 10 0 0 0-6-10Z"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+            <h4>Made Fresh Daily</h4>
+            <p>Every juice, bowl, and dessert is prepared fresh each morning — never frozen, never from concentrate.</p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-2">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+            </div>
+            <h4>Real Ingredients</h4>
+            <p>No artificial colours, no preservatives, no shortcuts. Just honest, whole ingredients you can taste and trust.</p>
+          </div>
+
+          <div class="value-card reveal reveal-delay-3">
+            <div class="value-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L7 19c4-3 8-4 13-4V8z"/><path d="M12.5 2A9.5 9.5 0 0 1 22 11.5"/></svg>
+            </div>
+            <h4>Sustainably Sourced</h4>
+            <p>We work closely with local growers across Aotearoa, championing sustainable farming and minimal-waste practices.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Email Signup Section -->
-    <section class="signup-section" id="signup">
-        <div class="container">
-            <div class="signup-content">
-                <h2 class="signup-title">Stay in the Loop</h2>
-                <p class="signup-subtitle">Be the first to know when we open our doors</p>
-                <form class="signup-form" id="signupForm">
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" placeholder="Enter your email address" required aria-label="Email address">
-                        <button type="submit" class="submit-button">Sign Up</button>
-                    </div>
-                    <p class="form-message" id="formMessage"></p>
-                </form>
-            </div>
+    <!-- CTA -->
+    <section>
+      <div class="container">
+        <div class="cta-banner reveal">
+          <div class="cta-blob cta-blob-1"></div>
+          <div class="cta-blob cta-blob-2"></div>
+          <span class="eyebrow" style="color: rgba(255,255,255,0.5);">Get to Know Us</span>
+          <h2>Discover the KIWI DOSE Story</h2>
+          <p>Learn about our journey from a passion for natural goodness to bringing you the freshest flavours of New Zealand.</p>
+          <a href="story.html" class="btn btn-secondary">
+            Read Our Story
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
         </div>
+      </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <h3 class="footer-logo">KIWI DOSE</h3>
-                    <p class="footer-tagline">A fresh <strong>Dose</strong> of Aotearoa</p>
-                </div>
-                <div class="footer-links">
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Explore</h4>
-                        <ul class="footer-menu">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="story.html">Our Story</a></li>
-                            <li><a href="values.html">Values</a></li>
-                            <li><a href="menu.html">Menu</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                            <li><a href="online-ordering.html">Online Ordering</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer-column">
-                        <h4 class="footer-heading">Follow Us</h4>
-                        <ul class="social-links">
-                            <li><a href="#" aria-label="Facebook" class="social-link">Facebook</a></li>
-                            <li><a href="https://www.instagram.com/kiwidose.nz?igsh=emdiNzJtbTR6eWEw" aria-label="Instagram" class="social-link">Instagram</a></li>
-                            <li><a href="#" aria-label="TikTok" class="social-link">TikTok</a></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img src="kiwi-dose-green.png" alt="KIWI DOSE" />
+            <p>A fresh dose of Aotearoa — handcrafted juices, acai bowls &amp; desserts made with love in New Zealand.</p>
+          </div>
+          <div>
+            <h5>Navigate</h5>
+            <div class="footer-links">
+              <a href="index.html" class="footer-link">Home</a>
+              <a href="menu.html" class="footer-link">Menu</a>
+              <a href="order.html" class="footer-link">Order Online</a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Kiwi Dose. All rights reserved.</p>
+          </div>
+          <div>
+            <h5>Company</h5>
+            <div class="footer-links">
+              <a href="story.html" class="footer-link">Our Story</a>
+              <a href="contact.html" class="footer-link">Contact</a>
             </div>
+          </div>
+          <div>
+            <h5>Get in Touch</h5>
+            <div class="footer-links">
+              <a href="mailto:team@kiwidose.nz" class="footer-link">team@kiwidose.nz</a>
+              <a class="footer-link">022 432 7053</a>
+            </div>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <span>&copy; 2026 KIWI DOSE. All rights reserved.</span>
+          <div class="footer-social">
+            <a href="#" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><path d="M17.5 6.5h.01"/></svg>
+            </a>
+            <a href="#" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
     </footer>
 
-    <script src="js/main.js"></script>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
-
