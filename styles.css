@@ -215,11 +215,13 @@ section {
   z-index: -1;
 }
 
-.nav.scrolled::before {
+.nav.scrolled::before,
+.nav-on-light::before {
   opacity: 1;
 }
 
-.nav.scrolled {
+.nav.scrolled,
+.nav-on-light {
   box-shadow: 0 1px 0 rgba(6,75,49,0.08);
 }
 
@@ -940,6 +942,28 @@ section {
 .form-success.show {
   display: block;
   animation: fadeUp 0.5s var(--ease-out);
+}
+
+/* ---------- Menu Page ---------- */
+.menu-full {
+  padding-top: var(--nav-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--cream);
+  padding-bottom: var(--space-xl);
+}
+
+.menu-full img {
+  width: min(92%, 960px);
+  height: auto;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .menu-full img {
+    width: 100%;
+  }
 }
 
 /* ---------- Coming Soon Page ---------- */
