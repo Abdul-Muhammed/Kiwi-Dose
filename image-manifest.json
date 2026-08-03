@@ -1,0 +1,415 @@
+{
+  "generated": "2026-08-03",
+  "notes": {
+    "processing": "Originals in photography/ are unmodified. Audit found all 11 files sRGB, EXIF orientation 1, and carrying no EXIF/XMP/IPTC/GPS. Nothing to strip or rotate, and re-encoding the JPEG inflated 6 of 11 files, so the .jpg in images/ is a byte-exact copy of the supplied original. WebP is transcoded once from that same source at quality 85, at 800px and at native width. No upscaling: no source exceeds 1131px wide, so no 1200px+ variant exists.",
+    "hero_resolution_flag": "All sources are 1024-1131px wide, below the ~1400px the brief sets for a full-bleed desktop hero. Not currently an issue because the homepage hero remains a CSS gradient with no photograph. If a photo hero is ever wanted, request higher-resolution exports first.",
+    "baked_in_text_warning": "Six files carry marketing typography burned into the pixels, shipped as-is at client direction. They include \"ANTIOXIDANTS + NATURAL ENERGY\", \"TROPICAL HYDRATION + ELECTROLYTE BOOST\" and \"NATURAL ENERGY\" - the same class of unevidenced claim removed from the site text, but not greppable or removable without re-editing the images. Also \"WHITTAKERS CHUNK MADDNESS\" (typo) and \"OUR BEST SELLER\" appearing on two different products. Text in images is invisible to search engines and screen readers. Recommended fix: request text-free exports from the photographer.",
+    "gaps": "No shopfront, interior, team or premises photograph exists in the supplied library, and nothing is landscape. Contact page ships without a shopfront image; Our Story and the Visit Us block use the closest available frames. These are flagged, not filled with stock."
+  },
+  "images": [
+    {
+      "source_file": "Dutch pancakes.jpeg",
+      "new_filename": "mini-dutch-pancakes-caramel-mount-eden.jpg",
+      "subject": "mini Dutch pancakes",
+      "placement": [
+        "Homepage - category card 1",
+        "Homepage - Favourites",
+        "Mini Dutch Pancakes page - hero",
+        "Open Graph / social card"
+      ],
+      "alt_text": "Mini Dutch pancakes topped with caramel sauce, crumble and a scoop of ice cream at Kiwi Dose Mount Eden",
+      "orientation": "portrait",
+      "is_hero": true,
+      "has_baked_in_text": false,
+      "audit": {
+        "source_px": "1131x1600",
+        "width": 1131,
+        "height": 1600,
+        "format": "jpeg",
+        "colour_profile": "srgb (ICC embedded)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 350170
+      },
+      "webp_variants": [
+        {
+          "file": "mini-dutch-pancakes-caramel-mount-eden-800.webp",
+          "width": 800,
+          "height": 1132,
+          "bytes": 123716
+        },
+        {
+          "file": "mini-dutch-pancakes-caramel-mount-eden-1131.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 187848
+        }
+      ]
+    },
+    {
+      "source_file": "Waffle.jpeg",
+      "new_filename": "signature-waffle-berries-mount-eden.jpg",
+      "subject": "signature waffle",
+      "placement": [
+        "Homepage - Favourites",
+        "Mini Dutch Pancakes page - supporting"
+      ],
+      "alt_text": "Signature waffle topped with strawberries, blueberries, coconut and halva",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": false,
+      "audit": {
+        "source_px": "1131x1600",
+        "width": 1131,
+        "height": 1600,
+        "format": "jpeg",
+        "colour_profile": "srgb (ICC embedded)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 285367
+      },
+      "webp_variants": [
+        {
+          "file": "signature-waffle-berries-mount-eden-800.webp",
+          "width": 800,
+          "height": 1132,
+          "bytes": 91668
+        },
+        {
+          "file": "signature-waffle-berries-mount-eden-1131.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 141004
+        }
+      ]
+    },
+    {
+      "source_file": "Crepes.jpeg",
+      "new_filename": "luxury-crepe-pistachio-kiwidose.jpg",
+      "subject": "luxury crêpe",
+      "placement": [
+        "Homepage - Favourites",
+        "Mini Dutch Pancakes page - supporting"
+      ],
+      "alt_text": "Pistachio crêpe drizzled with chocolate and topped with Whittaker's chunks",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": false,
+      "audit": {
+        "source_px": "1131x1600",
+        "width": 1131,
+        "height": 1600,
+        "format": "jpeg",
+        "colour_profile": "srgb (ICC embedded)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 332303
+      },
+      "webp_variants": [
+        {
+          "file": "luxury-crepe-pistachio-kiwidose-800.webp",
+          "width": 800,
+          "height": 1132,
+          "bytes": 116408
+        },
+        {
+          "file": "luxury-crepe-pistachio-kiwidose-1131.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 170748
+        }
+      ]
+    },
+    {
+      "source_file": "ACAI+V Bowl.jpeg",
+      "new_filename": "acai-bowl-vanilla-swirl-mount-eden.jpg",
+      "subject": "açaí bowl",
+      "placement": [
+        "Homepage - category card 2",
+        "Açaí Bowls page - hero"
+      ],
+      "alt_text": "Açaí and vanilla swirl soft serve in a Kiwi Dose bowl",
+      "orientation": "portrait",
+      "is_hero": true,
+      "has_baked_in_text": false,
+      "audit": {
+        "source_px": "1131x1600",
+        "width": 1131,
+        "height": 1600,
+        "format": "jpeg",
+        "colour_profile": "srgb (ICC embedded)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 125636
+      },
+      "webp_variants": [
+        {
+          "file": "acai-bowl-vanilla-swirl-mount-eden-800.webp",
+          "width": 800,
+          "height": 1132,
+          "bytes": 32514
+        },
+        {
+          "file": "acai-bowl-vanilla-swirl-mount-eden-1131.webp",
+          "width": 1131,
+          "height": 1600,
+          "bytes": 48248
+        }
+      ]
+    },
+    {
+      "source_file": "ACI+VANILA MIX CONE.jpeg",
+      "new_filename": "acai-vanilla-soft-serve-cone-kiwidose.jpg",
+      "subject": "açaí soft serve cone",
+      "placement": [
+        "Homepage - Favourites",
+        "Açaí Bowls page - supporting",
+        "Our Story - section 1"
+      ],
+      "alt_text": "Açaí and vanilla soft serve cone held inside the Kiwi Dose café",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": false,
+      "audit": {
+        "source_px": "1024x1536",
+        "width": 1024,
+        "height": 1536,
+        "format": "jpeg",
+        "colour_profile": "srgb (ICC embedded)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 220736
+      },
+      "webp_variants": [
+        {
+          "file": "acai-vanilla-soft-serve-cone-kiwidose-800.webp",
+          "width": 800,
+          "height": 1200,
+          "bytes": 62470
+        },
+        {
+          "file": "acai-vanilla-soft-serve-cone-kiwidose-1024.webp",
+          "width": 1024,
+          "height": 1536,
+          "bytes": 89432
+        }
+      ]
+    },
+    {
+      "source_file": "ICED MACHA LATTE.jpeg",
+      "new_filename": "iced-matcha-latte-mount-eden.jpg",
+      "subject": "iced matcha latte",
+      "placement": [
+        "Homepage - category card 3"
+      ],
+      "alt_text": "Iced matcha latte beside a bowl of matcha powder and a bamboo whisk",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": true,
+      "audit": {
+        "source_px": "1024x1280",
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg",
+        "colour_profile": "srgb (no ICC)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 98811
+      },
+      "webp_variants": [
+        {
+          "file": "iced-matcha-latte-mount-eden-800.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 54050
+        },
+        {
+          "file": "iced-matcha-latte-mount-eden-1024.webp",
+          "width": 1024,
+          "height": 1280,
+          "bytes": 74018
+        }
+      ]
+    },
+    {
+      "source_file": "ICED AMERICANO.jpeg",
+      "new_filename": "iced-americano-kiwidose-auckland.jpg",
+      "subject": "iced americano",
+      "placement": [
+        "Homepage - Favourites"
+      ],
+      "alt_text": "Iced americano in a Kiwi Dose cup",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": true,
+      "audit": {
+        "source_px": "1024x1280",
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg",
+        "colour_profile": "srgb (no ICC)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 111592
+      },
+      "webp_variants": [
+        {
+          "file": "iced-americano-kiwidose-auckland-800.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 62234
+        },
+        {
+          "file": "iced-americano-kiwidose-auckland-1024.webp",
+          "width": 1024,
+          "height": 1280,
+          "bytes": 87574
+        }
+      ]
+    },
+    {
+      "source_file": "Tropical wave cooler.jpeg",
+      "new_filename": "tropical-wave-cooler-juice-kiwidose.jpg",
+      "subject": "tropical juice",
+      "placement": [
+        "Homepage - Visit Us block"
+      ],
+      "alt_text": "Tropical Wave Cooler made with fresh pineapple, mango and lemon",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": true,
+      "audit": {
+        "source_px": "1080x1350",
+        "width": 1080,
+        "height": 1350,
+        "format": "jpeg",
+        "colour_profile": "srgb (no ICC)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 144188
+      },
+      "webp_variants": [
+        {
+          "file": "tropical-wave-cooler-juice-kiwidose-800.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 73052
+        },
+        {
+          "file": "tropical-wave-cooler-juice-kiwidose-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 105108
+        }
+      ]
+    },
+    {
+      "source_file": "Mango hydradtion boost.jpeg",
+      "new_filename": "mango-hydration-boost-drink-kiwidose.jpg",
+      "subject": "mango drink",
+      "placement": [
+        "Our Story - section 2"
+      ],
+      "alt_text": "Mango Hydration Boost with fresh mango, coconut and mint",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": true,
+      "audit": {
+        "source_px": "1080x1350",
+        "width": 1080,
+        "height": 1350,
+        "format": "jpeg",
+        "colour_profile": "srgb (no ICC)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 189142
+      },
+      "webp_variants": [
+        {
+          "file": "mango-hydration-boost-drink-kiwidose-800.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 104936
+        },
+        {
+          "file": "mango-hydration-boost-drink-kiwidose-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 154504
+        }
+      ]
+    },
+    {
+      "source_file": "ruby berry cheesecake.jpeg",
+      "new_filename": "ruby-berry-cheesecake-smoothie-kiwidose.jpg",
+      "subject": "berry smoothie",
+      "placement": [
+        "Homepage - Favourites"
+      ],
+      "alt_text": "Ruby Berry Cheesecake smoothie with strawberries, banana and vanilla",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": true,
+      "audit": {
+        "source_px": "1080x1350",
+        "width": 1080,
+        "height": 1350,
+        "format": "jpeg",
+        "colour_profile": "srgb (no ICC)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 159456
+      },
+      "webp_variants": [
+        {
+          "file": "ruby-berry-cheesecake-smoothie-kiwidose-800.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 84302
+        },
+        {
+          "file": "ruby-berry-cheesecake-smoothie-kiwidose-1080.webp",
+          "width": 1080,
+          "height": 1350,
+          "bytes": 122680
+        }
+      ]
+    },
+    {
+      "source_file": "Whittakers chunk madness.jpeg",
+      "new_filename": "whittakers-chunk-milkshake-mount-eden.jpg",
+      "subject": "chocolate milkshake",
+      "placement": [
+        "Homepage - Favourites"
+      ],
+      "alt_text": "Chocolate milkshake surrounded by Whittaker's chocolate chunks",
+      "orientation": "portrait",
+      "is_hero": false,
+      "has_baked_in_text": true,
+      "audit": {
+        "source_px": "1024x1280",
+        "width": 1024,
+        "height": 1280,
+        "format": "jpeg",
+        "colour_profile": "srgb (no ICC)",
+        "exif_orientation": 1,
+        "metadata": "n/a - source carries no EXIF/XMP/IPTC/GPS",
+        "source_bytes": 164279
+      },
+      "webp_variants": [
+        {
+          "file": "whittakers-chunk-milkshake-mount-eden-800.webp",
+          "width": 800,
+          "height": 1000,
+          "bytes": 107724
+        },
+        {
+          "file": "whittakers-chunk-milkshake-mount-eden-1024.webp",
+          "width": 1024,
+          "height": 1280,
+          "bytes": 143814
+        }
+      ]
+    }
+  ]
+}

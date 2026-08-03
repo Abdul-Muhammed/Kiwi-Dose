@@ -172,9 +172,23 @@ section {
   gap: var(--space-lg);
 }
 
+.grid-4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+}
+
+@media (min-width: 640px) {
+  .grid-4 { grid-template-columns: 1fr 1fr; }
+}
+
 @media (min-width: 768px) {
   .grid-2 { grid-template-columns: 1fr 1fr; }
   .grid-3 { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .grid-4 { grid-template-columns: repeat(4, 1fr); }
 }
 
 /* ---------- Page Load ---------- */
@@ -286,6 +300,92 @@ section {
 
 .nav-link:hover { opacity: 0.7; }
 
+/* Order Online, styled as the primary action on every page.
+   --kiwi-bright with --deep-green text is 5.02:1 (AA); white on --green was
+   only 4.33:1. This pairing also stays legible on both the dark hero nav and
+   the light scrolled nav. */
+.nav-link-cta {
+  background: var(--kiwi-bright);
+  color: var(--deep-green) !important;
+  font-weight: 600;
+  padding: 0.625rem 1.25rem;
+  border-radius: var(--radius-pill);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.nav-link-cta::after { content: none; }
+
+.nav-link-cta:hover {
+  background: var(--deep-green);
+  color: var(--white) !important;
+  opacity: 1;
+}
+
+/* Dropdown. Keeps the top bar at five items so it does not overflow
+   between 769px (where .nav-links appears) and ~1050px. */
+.nav-item-has-menu { position: relative; }
+
+.nav-link-parent {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.nav-caret { width: 12px; height: 12px; transition: transform var(--transition-fast); }
+
+.nav-item-has-menu:hover .nav-caret,
+.nav-item-has-menu:focus-within .nav-caret { transform: rotate(180deg); }
+
+.nav-submenu {
+  position: absolute;
+  top: calc(100% + 0.75rem);
+  left: 50%;
+  transform: translateX(-50%) translateY(-6px);
+  min-width: 15rem;
+  padding: var(--space-sm);
+  background: var(--white);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-fast), transform var(--transition-fast), visibility var(--transition-fast);
+}
+
+/* :focus-within means keyboard users reveal the submenu by tabbing, with no JS. */
+.nav-item-has-menu:hover .nav-submenu,
+.nav-item-has-menu:focus-within .nav-submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Bridges the gap between the parent link and the panel so the pointer
+   can travel down without the submenu closing. */
+.nav-submenu::before {
+  content: '';
+  position: absolute;
+  inset: -0.75rem 0 100% 0;
+}
+
+.nav-sublink {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  color: var(--deep-green);
+  white-space: nowrap;
+  transition: background var(--transition-fast);
+}
+
+.nav-sublink:hover,
+.nav-sublink:focus-visible { background: var(--light-sage); }
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -353,13 +453,26 @@ section {
   transform: translateY(0);
 }
 
-.mobile-menu.open .mobile-menu-link:nth-child(1) { transition-delay: 0.1s; }
-.mobile-menu.open .mobile-menu-link:nth-child(2) { transition-delay: 0.15s; }
-.mobile-menu.open .mobile-menu-link:nth-child(3) { transition-delay: 0.2s; }
-.mobile-menu.open .mobile-menu-link:nth-child(4) { transition-delay: 0.25s; }
-.mobile-menu.open .mobile-menu-link:nth-child(5) { transition-delay: 0.3s; }
+/* Two .mobile-menu-blob divs precede the links, so the first link is child 3.
+   The previous 1-5 selectors left the last two links with no stagger delay. */
+.mobile-menu.open .mobile-menu-link:nth-child(3) { transition-delay: 0.10s; }
+.mobile-menu.open .mobile-menu-link:nth-child(4) { transition-delay: 0.15s; }
+.mobile-menu.open .mobile-menu-link:nth-child(5) { transition-delay: 0.20s; }
+.mobile-menu.open .mobile-menu-link:nth-child(6) { transition-delay: 0.25s; }
+.mobile-menu.open .mobile-menu-link:nth-child(7) { transition-delay: 0.30s; }
+.mobile-menu.open .mobile-menu-link:nth-child(8) { transition-delay: 0.35s; }
+.mobile-menu.open .mobile-menu-link:nth-child(9) { transition-delay: 0.40s; }
 
 .mobile-menu-link:hover { color: var(--sage); }
+
+/* Landing pages sit one level under Menu in the mobile overlay. The menu is
+   centre-aligned, so nesting is shown by size and opacity rather than indent. */
+.mobile-menu-sublink {
+  font-size: var(--text-lg);
+  opacity: 0;
+}
+
+.mobile-menu.open .mobile-menu-sublink { opacity: 0.85; }
 
 .mobile-menu-blob {
   position: absolute;
@@ -676,12 +789,14 @@ section {
 
 /* ---------- Category Cards ---------- */
 .category-card {
+  display: block; /* the category cards are now <a> elements */
   border-radius: var(--radius-lg);
   overflow: hidden;
   background: var(--white);
   box-shadow: var(--shadow-sm);
   transition: transform var(--transition-organic), box-shadow var(--transition-organic);
   cursor: pointer;
+  height: 100%;
 }
 
 .category-card:hover {
@@ -692,6 +807,21 @@ section {
 .category-card-img {
   aspect-ratio: 4/3;
   overflow: hidden;
+}
+
+/* Portrait variant. The supplied photography is all portrait (3:4 and 4:5),
+   and six frames carry typography burned into the pixels, which a 4/3 crop
+   would slice through. Additive only - the 4/3 default above is unchanged. */
+.category-card-img--portrait { aspect-ratio: 4/5; }
+
+/* <picture> is inline by default, which would collapse the height: 100%
+   on the img inside these fixed-ratio boxes. */
+.category-card-img picture,
+.story-image picture,
+.product-gallery picture {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .category-card-img img {
@@ -717,6 +847,24 @@ section {
 .category-card-body p {
   font-size: var(--text-sm);
 }
+
+/* ---------- Favourites Grid ---------- */
+.favourites-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+}
+
+@media (min-width: 640px) {
+  .favourites-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (min-width: 1024px) {
+  .favourites-grid { grid-template-columns: repeat(4, 1fr); }
+}
+
+.favourite-card .category-card-body { padding: var(--space-sm) var(--space-sm) var(--space-md); }
+.favourite-card .category-card-body h3 { font-size: var(--text-base); margin-bottom: 0; }
 
 /* ---------- Value Cards ---------- */
 .value-card {
@@ -747,7 +895,10 @@ section {
   height: 28px;
 }
 
-.value-card h4 {
+/* h3 for correct heading order; sized to match the previous h4. */
+.value-card h4,
+.value-card h3 {
+  font-size: var(--text-xl);
   margin-bottom: var(--space-xs);
 }
 
@@ -811,6 +962,15 @@ section {
   aspect-ratio: 4/3;
 }
 
+/* For the frames that carry typography burned into the pixels, a 4/3 crop
+   slices the headline. These keep the source 4:5 ratio instead, capped so a
+   portrait image does not tower over the text column beside it. */
+.story-image--portrait {
+  aspect-ratio: 4/5;
+  max-width: 26rem;
+  margin-inline: auto;
+}
+
 .story-image img {
   width: 100%;
   height: 100%;
@@ -843,7 +1003,8 @@ section {
   box-shadow: var(--shadow-md);
 }
 
-.story-value-item h4 {
+.story-value-item h4,
+.story-value-item h3 {
   font-size: var(--text-lg);
   margin-bottom: var(--space-xs);
   display: flex;
@@ -885,7 +1046,9 @@ section {
 }
 
 .contact-item-icon svg { width: 22px; height: 22px; }
-.contact-item h4 { font-size: var(--text-base); font-family: var(--font-body); font-weight: 600; }
+/* h2 for correct heading order; sized to match the previous h4 exactly. */
+.contact-item h4,
+.contact-item h2 { font-size: var(--text-base); font-family: var(--font-body); font-weight: 600; letter-spacing: normal; }
 .contact-item p { font-size: var(--text-sm); }
 .contact-item a { color: var(--green); text-decoration: underline; text-underline-offset: 3px; }
 .contact-item a:hover { color: var(--deep-green); }
@@ -943,6 +1106,8 @@ section {
   display: block;
   animation: fadeUp 0.5s var(--ease-out);
 }
+
+.form-success h3 { font-size: var(--text-xl); }
 
 /* ---------- Menu Page ---------- */
 .menu-full {
@@ -1146,7 +1311,9 @@ section {
 }
 
 .footer-brand p {
-  color: rgba(255,255,255,0.5);
+  /* 0.75 here, not 0.5: the global `p { opacity: 0.8 }` multiplies through,
+     and 0.5 landed at 3.72:1 against --dark, below the 4.5:1 AA threshold. */
+  color: rgba(255,255,255,0.75);
   font-size: var(--text-sm);
   margin-top: var(--space-sm);
   max-width: 30ch;
@@ -1159,7 +1326,8 @@ section {
   opacity: 0.9;
 }
 
-.footer h5 {
+.footer h5,
+.footer h2 {
   color: var(--white);
   font-family: var(--font-body);
   font-weight: 600;
@@ -1187,7 +1355,7 @@ section {
   align-items: center;
   gap: var(--space-sm);
   font-size: var(--text-sm);
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6); /* 0.4 was 3.72:1 against --dark, below AA */
 }
 
 .footer-social {
@@ -1357,4 +1525,237 @@ section {
 @media (max-width: 480px) {
   .nav-logo img { height: 28px; }
   .btn-lg { padding: 0.9rem 2rem; }
+}
+
+/* ============================================
+   Local SEO / contact additions
+   ============================================ */
+
+/* ---------- Footer hours ---------- */
+.footer-hours span {
+  display: block;
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+}
+
+.footer-address {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.7);
+  margin-top: var(--space-sm);
+}
+
+/* ---------- Opening hours list ---------- */
+.hours-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-top: var(--space-xs);
+}
+
+.hours-list div {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  font-size: var(--text-sm);
+  max-width: 22rem;
+  padding-block: 0.15rem;
+}
+
+.hours-list dt { font-weight: 600; }
+.hours-list .is-closed { color: var(--grey); }
+
+/* ---------- Map embed ---------- */
+.map-embed {
+  margin-top: var(--space-lg);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  line-height: 0;
+}
+
+.map-embed iframe {
+  width: 100%;
+  height: 380px;
+  border: 0;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .map-embed iframe { height: 300px; }
+}
+
+/* ---------- Location block ---------- */
+.location-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-lg);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .location-card { grid-template-columns: 1.1fr 0.9fr; }
+}
+
+.location-address {
+  font-size: var(--text-lg);
+  margin-top: var(--space-sm);
+}
+
+/* ---------- Product landing pages ---------- */
+.product-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+@media (min-width: 768px) {
+  .product-gallery { grid-template-columns: repeat(3, 1fr); }
+}
+
+.product-gallery figure {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  aspect-ratio: 4/5;
+}
+
+.product-gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ---------- Sticky mobile CTA bar ---------- */
+.mobile-cta {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1005;
+  background: var(--white);
+  box-shadow: 0 -2px 20px rgba(6,75,49,0.14);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.mobile-cta-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.mobile-cta a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.2rem;
+  min-height: 56px;
+  padding: 0.5rem 0.25rem;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--deep-green);
+  transition: background var(--transition-fast);
+}
+
+/* --deep-green, not --green: white on --green is 4.33:1, just under AA. */
+.mobile-cta a:first-child {
+  background: var(--deep-green);
+  color: var(--white);
+}
+
+.mobile-cta a:active { background: var(--light-sage); }
+.mobile-cta a:first-child:active { background: #04351f; }
+.mobile-cta svg { width: 20px; height: 20px; }
+
+@media (max-width: 768px) {
+  .mobile-cta { display: block; }
+  .footer { padding-bottom: calc(var(--space-xl) + 56px); }
+  .mobile-menu { padding-bottom: 56px; }
+}
+
+/* ---------- Form error ---------- */
+.form-error {
+  color: var(--coral);
+  font-size: var(--text-sm);
+  font-weight: 600;
+  max-width: none;
+  opacity: 1;
+}
+
+.coming-soon-form .form-error,
+.coming-soon .form-error { color: #FFD9D2; }
+
+/* ---------- Active submenu item ---------- */
+.nav-sublink.active { background: var(--light-sage); font-weight: 600; }
+
+/* ---------- Visually hidden ----------
+   Available to screen readers and crawlers, invisible on screen.
+   Used for the menu page heading, where the page must not change
+   visually but still needs a single H1. */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Tap targets ----------
+   Interactive controls are expanded to a 44x44 minimum. Where enlarging the
+   box itself would shift the layout, an invisible ::before/::after extends the
+   hit area instead, so nothing moves visually.
+   Inline links inside a sentence are exempt (WCAG 2.5.8) and left alone. */
+
+.nav-logo {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+/* ::after is the hover underline, so the hit area uses ::before. */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  inset: -7px 0;
+}
+
+.hamburger { position: relative; }
+
+.hamburger::after {
+  content: '';
+  position: absolute;
+  inset: -12px -10px;
+}
+
+.mobile-menu-link {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+}
+
+.footer-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+}
+
+/* On touch widths give footer links the full 44px, absorbing the extra
+   height by dropping the list gap so the footer keeps its overall size. */
+@media (max-width: 768px) {
+  .footer-links { gap: 0; }
+  .footer-link { min-height: 44px; }
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
 }

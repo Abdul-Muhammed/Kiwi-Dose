@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" role="img" aria-label="Kiwi Dose">
+  <rect width="32" height="32" rx="7" fill="#064B31"/>
+  <g transform="translate(4 4)">
+    <path d="M17 8C8 10 5.9 16.17 3.82 21.34l1.89.66L7 19c4-3 8-4 13-4V8z"
+          fill="none" stroke="#93C54B" stroke-width="2.2"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
