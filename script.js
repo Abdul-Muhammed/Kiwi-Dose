@@ -13,7 +13,7 @@
 
    Leave it as an empty string while ordering is not yet available.
    -------------------------------------------------------------- */
-const TABIN_ORDER_URL = '';
+const TABIN_ORDER_URL = 'https://order.tabin.co.nz/a808e265-2c74-4701-9d62-a48f905c5c58';
 
 document.addEventListener('DOMContentLoaded', () => {
 
